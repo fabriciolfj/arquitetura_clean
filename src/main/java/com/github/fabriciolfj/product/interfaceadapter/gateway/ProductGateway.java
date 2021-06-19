@@ -16,7 +16,7 @@ public class ProductGateway implements SaveProduct {
     private final ProductRepository productRepository;
 
     @Override
-    public void save(Product product) {
+    public void save(final Product product) {
         ofNullable(ProductEntityMapper.INSTANCE.toEntity(product))
                 .map(productRepository::save)
                 .get();
