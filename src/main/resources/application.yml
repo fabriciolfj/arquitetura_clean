@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: cadastro-pessoas
+  flyway:
+    locations:
+      - classpath:db/migration
+      - classpath:db/testdata
+  database:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:  sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoint:
+    metrics:
+      enabled: false
+    prometheus:
+      enabled: true

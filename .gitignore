@@ -1,0 +1,7 @@
+
+.gradle/
+build/
+
+.idea/
+
+.gradle/7.0.2/javaCompile/
